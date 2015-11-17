@@ -17,8 +17,8 @@ pb = Pushbullet(api_key)
 def home():
     abort(401)
 
-@app.route('/<int:number>', methods=['POST'])
-def get(number):
+@app.route('/<instance>', methods=['POST'])
+def get(instance):
     with open(phone_home_file, "a") as file:
         message = "%s: VM \'%s\' (%s) is done.\n" % ( str(datetime.now()),
                    request.form['hostname'], request.form['instance_id'] )
