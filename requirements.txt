@@ -1,2 +1,2 @@
-Flask
-pushbullet.py
+Flask==0.10.1
+pushbullet.py==0.8.1
